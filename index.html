@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Crystal_Collector</title>
+   <!-- Bootstrap File -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <!-- JQuery -->
+   <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Overall Bootstrap Grid -->
+  <div class="container">
+
+      <!-- Jumbotron with Title -->
+      <div class="jumbotron">
+        <h1 class="text-center">
+          <strong>Cristal Collector...Game!!</strong>
+  
+          <h3 class="instructions">
+ <p> The computer will provide a target number for you. </p>
+ <p> There are 4 rocks. Every rock has a hidden value.</p>
+ <p> Every time you click a rock, its value will be added until you reach the target number.</p>
+ <p> If you go over the target number, the game will end. Good luck!! </p>
+          </h3>
+ 
+ <button class="btn btn-warning btn-xs start-button">Start</button>
+ 
+
+ <div class="container">
+
+    <img id="red-rock" class="rock" src="red.jpg"
+    style="position:relative; top:50px; left: 80px; height: 100px">
+    
+    <img id="blue-rock"class="rock" src="blue.jpg"
+    style="position:relative; top:50px; left: 80px; height: 100px">
+
+    <img  id="yellow-rock" class="rock" src="yellow.png"
+    style="position:relative; top:50px; left: 80px; height: 100px">
+
+    <img id="white-rock" class="rock" src="white.jpg"
+    style="position:relative; top:50px; left: 80px; height: 100px">
+ 
+</div>
+<br></br>
+<br></br>
+
+ <div class="score">
+ <h2>
+ <p class="score" style="position:relative;  80 px; color:blue;">Target number</p>
+ <p id="target"></p>
+ <p class="score" style="position:relative;  color:red;"> Total Score</p>
+ <p id="score"></p>
+ 
+</h2>
+ </div>
+ <script src="app.js"></script>
+    
+</body>
