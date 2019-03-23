@@ -24,43 +24,44 @@
         <h1 class="text-center">
           <strong>Cristal Collector...Game!!</strong>
   
-          <h3 class="instructions">
- <p> The computer will provide a target number for you. </p>
- <p> There are 4 rocks. Every rock has a hidden value.</p>
- <p> Every time you click a rock, its value will be added until you reach the target number.</p>
+          <h4 class="instructions">
+ <p> The computer will provide a target number after clicking the Start button. </p>
+ <p> There are 4 crystals. Every crystal has a hidden value.</p>
+ <p> Every time you click a crystal, its value will be added until you reach the target number.</p>
  <p> If you go over the target number, the game will end. Good luck!! </p>
-          </h3>
- 
+          </h4>
  <button class="btn btn-warning btn-xs start-button">Start</button>
  
-
  <div class="container">
-
-    <img id="red-rock" class="rock" src="red.jpg"
-    style="position:relative; top:50px; left: 80px; height: 100px">
+ <div class="row">
+    <img id="red-rock" class="rock" src="assets/red.jpg"
+    style="position:relative; top:150px; left: 300px; height: 50px">
     
-    <img id="blue-rock"class="rock" src="blue.jpg"
-    style="position:relative; top:50px; left: 80px; height: 100px">
+    <img id="blue-rock"class="rock" src="assets/blue.jpg"
+    style="position:relative; top:150px; left: 300px; height: 50px">
+    
+    <img  id="yellow-rock" class="rock" src="assets/yellow.png"
+    style="position:relative; top:150px; left: 300px; height: 50px">
 
-    <img  id="yellow-rock" class="rock" src="yellow.png"
-    style="position:relative; top:50px; left: 80px; height: 100px">
+    <img id="white-rock" class="rock" src="assets/white.jpg"
+    style="position:relative; top:150px; left: 300px; height: 50px">
+    </div>
 
-    <img id="white-rock" class="rock" src="white.jpg"
-    style="position:relative; top:50px; left: 80px; height: 100px">
+
+ <div class="row">
  
-</div>
-<br></br>
-<br></br>
-
- <div class="score">
- <h2>
- <p class="score" style="position:relative;  80 px; color:blue;">Target number</p>
+ <p class="game" style="position:relative;  color:blue;">Target number</p>
  <p id="target"></p>
- <p class="score" style="position:relative;  color:red;"> Total Score</p>
+ <br></br>
+ <p class="game" style="position:relative;  color:red;"> Your Score</p>
  <p id="score"></p>
- 
-</h2>
+ <br></br>
+
  </div>
+ </div>
+
  <script src="app.js"></script>
     
 </body>
+</html>
+

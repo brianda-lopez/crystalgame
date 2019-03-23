@@ -1,85 +1,111 @@
 
 // 1. Create variable(s).
-var totalScore = 0;
+var randomNum = randomIntFromInterval();
+var total = 0; 
+var red;
+var blue;
+var yellow;
+var white;
 
+// 2.Run this function to start the game and the computer gives a Target number
 
-// 2.Run this function to start the game
+function randomIntFromInterval(min,max){
+  var min=20;
+  var max=100;
+return Math.floor(Math.random()*(max-min+1)+min);   
+} ;
+
 $(".start-button").on("click", function(){
-    //$(this).hide();
-    function randomIntFromInterval(min,max){
-      var min=20;
-      var max=100;
-    return Math.floor(Math.random()*(max-min+1)+min);
-      
-  } ;
-  
-  $("#target").html(randomIntFromInterval());
+    $(this).hide();
+  $("#target").html(randomNum);
+  red = redValue();  
+  blue = blueValue(); 
+  yellow= yellowValue(); 
+  white= whiteValue(); 
 }); 
 
 
-//3. Computer provides a Target number
-  function randomIntFromInterval(min,max){
-    var min=20;
-    var max=100;
-  return Math.floor(Math.random()*(max-min+1)+min);
-    
-} ;
+//3. When you click on the rock, a random number will be assigned to each rock
+function redValue(min,max){
+  var min=1;
+  var max=10;
+return Math.floor(Math.random()*(max-min+1)+min);
+}
 
-$("#target").html(randomIntFromInterval());
-
-$(".start-button").on("click", function(){
-  $(this).hide();
-  function randomIntFromInterval(min,max){
-    var min=20;
-    var max=100;
-  return Math.floor(Math.random()*(max-min+1)+min);
-    
-} ;
-
-
-
-
-
-});
-
-
-
-
-
-//4. When you click on the rock, a random number will be assigned to each rock
 $("#red-rock").on("click", function(){
-  function redValue(min,max){
-    var min=1;
-    var max=4;
-  return Math.floor(Math.random()*(max-min+1)+min);
-};
-console.log(redValue());
-
+  total = total + red ;
+  console.log(red);
+  $("#score").html(total);
+  compare();
 });
-
+function blueValue(min,max){
+  var min=1;
+  var max=10;
+return Math.floor(Math.random()*(max-min+1)+min);
+}
 $("#blue-rock").on("click", function(){
-  function blueValue(min,max){
-    var min=5;
-    var max=8;
-  return Math.floor(Math.random()*(max-min+1)+min);
-  };
-  console.log(blueValue());
+  total = total + blue;
+  console.log(blue);
+  $("#score").html(total);
+  compare();
 });
-
-$("#white-rock").on("click", function(){
-  function whiteValue(min,max){
-    var min=5;
-    var max=8;
-  return Math.floor(Math.random()*(max-min+1)+min);
-  };
-  console.log(whiteValue());
-});
+function yellowValue(min,max){
+  var min=1;
+  var max=10;
+return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 $("#yellow-rock").on("click", function(){
-  function yellowValue(min,max){
-    var min=5;
-    var max=8;
-  return Math.floor(Math.random()*(max-min+1)+min);
-  };
-  console.log(yellowValue());
+  total = total + yellow;
+  console.log(yellow);
+  $("#score").html(total);
+  compare();
 });
+
+function whiteValue(min,max){
+  var min=1;
+  var max=10;
+return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+$("#white-rock").on("click", function(){
+  total = total + white;
+  console.log(white);
+  $("#score").html(total);
+  compare();
+});
+
+//4. Comparing the total of the values (score) with target number (randomNum)
+function compare(){
+  if (total === randomNum ){
+    alert("You win!!");
+    reset();
+  }
+  if (total > randomNum){
+    alert ("You lost!!");
+    reset();
+}
+};
+
+//5. To reset the game, show the start button, clear the target number and score
+
+function reset(){
+$(".start-button").show();
+$("#score").empty();
+$("#target").empty();
+randomNum = randomIntFromInterval();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
